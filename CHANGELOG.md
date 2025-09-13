@@ -1,5 +1,11 @@
 # @rayriffy/filesystem
 
+## 1.0.0
+
+### Major Changes
+
+- 5ba62ab: initial release
+
 ## 0.0.2
 
 ### Patch Changes
