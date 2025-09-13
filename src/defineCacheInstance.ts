@@ -16,7 +16,7 @@ export const defineCacheInstance = (instanceOptions?: Partial<Option>) => {
     functionOptions?: Partial<Option>
   ) => {
     const options = { ...baseOptions, ...functionOptions }
-    if (!options.enabled) return
+    if (!options.enabled) return null
 
     const hash = getHash(key)
     const requestedDirectory = join(options.cacheDirectory, hash)
@@ -39,12 +39,13 @@ export const defineCacheInstance = (instanceOptions?: Partial<Option>) => {
     } catch (e) {
       console.error(`failed to write [${key.join(', ')}] to filesystem`)
       await rm(join(requestedDirectory, targetFileName)).catch(() => {})
+      return null
     }
   }
 
   const read = async <T = unknown>(key: Key[], functionOptions?: Partial<Option>) => {
     const options = { ...baseOptions, ...functionOptions }
-    if (!options.enabled) return
+    if (!options.enabled) return null
 
     const hash = getHash(key)
     const requestedDirectory = join(options.cacheDirectory, hash)
