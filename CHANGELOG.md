@@ -1,5 +1,11 @@
 # @rayriffy/filesystem
 
+## 1.0.1
+
+### Patch Changes
+
+- fb081ab: nullable types
+
 ## 1.0.0
 
 ### Major Changes
