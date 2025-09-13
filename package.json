@@ -1,5 +1,5 @@
 {
-  "name": "@rayriffy/quick-npm",
+  "name": "@rayriffy/filesystem",
   "version": "0.0.2",
   "author": "Phumrapee Limpianchop <mail@rayriffy.com>",
   "description": "Quick start template for publishing NPM package.",
@@ -16,16 +16,13 @@
     }
   },
   "repository": {
-    "url": "git+https://github.com/rayriffy/quick-npm"
+    "url": "git+https://github.com/rayriffy/filesystem"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "files": [
-    "src",
-    "dist"
-  ],
+  "files": ["src", "dist"],
   "scripts": {
     "preinstall": "npx only-allow bun",
     "test": "vitest",
@@ -42,6 +39,7 @@
     "@biomejs/biome": "1.9.4",
     "@changesets/cli": "2.29.7",
     "@tsconfig/node22": "22.0.2",
+    "@types/node": "24.3.3",
     "tsup": "8.5.0",
     "typescript": "5.9.2",
     "vitest": "3.2.4"

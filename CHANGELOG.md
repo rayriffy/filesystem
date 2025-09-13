@@ -1,4 +1,4 @@
-# @rayriffy/quick-npm
+# @rayriffy/filesystem
 
 ## 0.0.2
 
